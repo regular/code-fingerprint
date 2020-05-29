@@ -16,13 +16,13 @@ See tests for details.
 
 It minifies the code using Terser and hashes the output. We use the normalizing effect of minimizing. However, there will be false negatives, meaning two functional identical pieces of code might have different fingerprints. False positives would be a bug though.
 
-This is a very simple appriach and experimental. Don't be surprised if it doesn't work for you.
+This is a very simple approach. Consider this module  experimental.
 
 # API
 
 `sha = fingerprint(code [, warnings])`
 
-If the 2nd argument is provided it should be an empty array (or something else with a `push` method) and it will be filled with warnings if they should occur.
+If the 2nd argument is provided it should be an empty array (or something else with a `push` method) and it will be filled with warnings (such as dead code removal) if they should occur.
 
 License: MIT
 
