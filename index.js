@@ -5,7 +5,7 @@ module.exports = function(src, warningsRef) {
   const result = normalize(src)
   if (result.err) throw result.err
   const {code, warnings} = result
-  if (warningsRef) {
+  if (warningsRef && warnings) {
     warnings.forEach(w=>warningsRef.push(w))
   }
 
